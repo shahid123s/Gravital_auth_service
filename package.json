@@ -1,0 +1,51 @@
+{
+  "name": "auth_service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./src/main/server.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/main/server.ts",
+    "build": "tsc",
+    "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahid123s/Gravital_auth_service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shahid123s/Gravital_auth_service/issues"
+  },
+  "homepage": "https://github.com/shahid123s/Gravital_auth_service#readme",
+  "dependencies": {
+    "@prisma/client": "^6.8.2",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.16.0",
+    "redis": "^5.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.15.29",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "globals": "^16.2.0",
+    "prettier": "^3.5.3",
+    "prisma": "^6.8.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.33.0"
+  }
+}

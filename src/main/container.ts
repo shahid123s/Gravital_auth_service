@@ -2,7 +2,7 @@
 import { IUserRepository } from "../domain/repositories/IUserRepository";
 import { SQLUserRepository } from "../infrastructure/database/SQL/repository/auth.repository";
 import { SendOTPUseCase } from "../application/usecase/register.usecase";
-import { AuthController } from "../infrastructure/web/controller/user.Controllor";
+import { AuthController } from "../infrastructure/web/controller/auth.Controllor";
 
 
 

@@ -12,7 +12,7 @@ export interface  IAppConfig {
     },
     jwt: {
         accessSecret: string;
-        accessExpiresIn: string;
+        accessExpiresIn: string ;
         refreshSecret: string;
         refreshExpiresIn: string;
     },

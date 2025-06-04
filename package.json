@@ -9,7 +9,6 @@
     "dev": "ts-node-dev --respawn --transpile-only src/main/server.ts",
     "build": "tsc",
     "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet"
-
   },
   "repository": {
     "type": "git",
@@ -29,7 +28,9 @@
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
     "pg": "^8.16.0",
-    "redis": "^5.1.1"
+    "redis": "^5.1.1",
+    "uuid": "^11.1.0",
+    "zod": "^3.25.50"
   },
   "devDependencies": {
     "@eslint/js": "^9.27.0",

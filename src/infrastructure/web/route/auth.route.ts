@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { AuthController } from "../controller/user.Controllor";
+import { AuthController } from "../controller/auth.Controllor";
 
 
 export  const makeAuthRoute = (studentController: AuthController) => {

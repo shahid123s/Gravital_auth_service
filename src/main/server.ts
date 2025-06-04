@@ -5,6 +5,7 @@ import { PrismaClient } from "@prisma/client";
 import { setupRoute } from "./routes";
 import morgan from 'morgan'
 import cors from 'cors';
+import redis from "../infrastructure/cache/redis/redis.config";
 config();
 
 const startServer = async () : Promise<void> => {
@@ -29,6 +30,8 @@ const startServer = async () : Promise<void> => {
     app.listen(PORT, async() => {
         try {
             await prisma.$connect();
+            await redis.connect();
+            console.log("Connected to the redis successfully");
             console.log(`Server is running on port ${PORT}`);
             
         } catch (error) {

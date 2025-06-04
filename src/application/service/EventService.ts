@@ -1,5 +1,5 @@
-import { UserCreatedEvent, OTPSentEvent, IEventService, IEventPublisher } from '../../domain/entities/Event';
-
+import { UserCreatedEvent, OTPSentEvent, IEventPublisher } from '../../domain/entities/Event';
+import { IEventService } from '../../domain/service/IEventService';
 
 
 export class EvnetService implements IEventService {

@@ -22,5 +22,8 @@ export interface  IAppConfig {
         password?: string;
         db?: number;
     }
+    kafka: {
+        
+    }
 
 }

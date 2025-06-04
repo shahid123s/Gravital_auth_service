@@ -11,6 +11,7 @@ import { AuthController } from "../infrastructure/web/controller/auth.Controllor
 
 import { CorsService } from "../infrastructure/service/cors.services";
 import { loadCorsConfig } from "../config/cors.config";
+import { RedisCache } from "../infrastructure/cache/redis/redisCache";
 
 export interface Container {
     corsService: CorsService;
@@ -23,16 +24,17 @@ export const createContainer = (): Container => {
     // Services
     const corsConfig = loadCorsConfig();
     const corsService = new CorsService(corsConfig);
+    const redisCache = new RedisCache();
 
     // Repositories
     const UserRepository = new SQLUserRepository();
 
 
     // Student Use Cases
-    const sendOtpUseCase = new SendOTPUseCase(UserRepository);
+    const sendOtpUseCase = new SendOTPUseCase(UserRepository, redisCache);
 
 
-    // Admin Use Cases
+
 
 
     // Controllers
